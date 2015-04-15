@@ -284,7 +284,8 @@
         [FBSDKLogger singleShotLogEntry:FBSDKLoggingBehaviorDeveloperErrors
                            formatString:@"FBSDKLoginBehaviorNative failed : %@\nTrying FBSDKLoginBehaviorBrowser", error];
       }
-      didPerformLogIn = [self performBrowserLogInWithParameters:loginParams error:&error];
+      //didPerformLogIn = [self performBrowserLogInWithParameters:loginParams error:&error];
+        didPerformLogIn = [self performWebLogInWithParameters:loginParams];
       break;
 
     case FBSDKLoginBehaviorSystemAccount: {
